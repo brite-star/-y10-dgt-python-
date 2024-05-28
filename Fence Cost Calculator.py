@@ -20,23 +20,51 @@ print("✨ i n s t r u c t i o n s ✨")
 print("---------------------------------------")
 print("Please input: Width and length (m) of ")
 print("the area you'll be fencing as well as ")
-print("the cost per meter squared.")
+print("the cost per meter squared.") 
 print("--------------------------------------")
 print("")
 
-#Asking for input and loop
+#Creates function to call every time I ask a user for a number 
+def test_float_Num(question): 
+    done = False 
+    error = "Thats an invalid number."
+    while not done: 
+        print(question)
+        try: 
+            num = float(input())
 
-Width = int(input("What is the lenght of your area (m)?"))
-Length = int(input("Great! Now what is the width of your area (m)?"))
-Cost = int(input("Now finally, what is the cost per square meter?")) 
+        except ValueError:
+            print(error)
+        return (num)
+    
+ 
+# Main routine 
+width = test_float_Num("Enter width of your area:")
+print(f"The number you have entered is ✨ {width} ✨.")
+print("")
+length = test_float_Num("Enter length of your area:")
+print(f"The number you have entered is ✨ {length} ✨.")
+print("")
+costpersquaremeter = test_float_Num("Enter the cost per meter squared:")
+print(f"The number you have entered is ✨ {costpersquaremeter} ✨.")
 
-#Giving user the results 
+#Adding up the numbers
+permeter= width + width + length + length
+area = width*length
+totalcost = area*costpersquaremeter
+
+#Results
 print("")
 print(f"Thanks,{Username}!")
 print("Here are your results:")
 print("")
 print("✨ r e s u l t s ✨")
-print("------------------------------------------")
-print(f"The total perimeter of your area is :")
-print ("And you total cost is: ")
-print("------------------------------------------")
+print("---------------------------------------")
+print("The permeter of your area is: ")
+print(f"✨ {permeter} m ✨")
+print("")
+print(f"The total cost of your area is: ")
+print(f"✨ ${totalcost} ✨")
+print("----------------------------------------")
+
+#
