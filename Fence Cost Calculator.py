@@ -49,7 +49,7 @@ costpersquaremeter = test_float_Num("Enter the cost per meter squared:")
 print(f"The number you have entered is ✨ {costpersquaremeter} ✨.")
 
 #Adding up the numbers
-permeter= width + width + length + length
+permeter= (width + length)*2
 totalcost = peremeter*costpersquaremeter
 
 #Results
