@@ -50,8 +50,7 @@ print(f"The number you have entered is ✨ {costpersquaremeter} ✨.")
 
 #Adding up the numbers
 permeter= width + width + length + length
-area = width*length
-totalcost = area*costpersquaremeter
+totalcost = peremeter*costpersquaremeter
 
 #Results
 print("")
